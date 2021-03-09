@@ -60,6 +60,17 @@
         <enum-item name='OnlyMembers'/>
         <enum-item name='Unk7'/>
     </enum-type>
+    
+    <enum-type type-name='zoom_movemask_flags'>
+        <enum-item name='Southeast'/>
+        <enum-item name='Northeast'/>
+        <enum-item name='Southwest'/>
+        <enum-item name='Northwest'/>
+        <enum-item name='West'/>
+        <enum-item name='East'/>
+        <enum-item name='South'/>
+        <enum-item name='North'/>
+    </enum-type>
 
     <struct-type type-name='abstract_building_entombed' comment='used within Tomb and Dungeon'>
         <stl-vector name='populations'>
@@ -789,8 +800,8 @@
             <static-array count='51' type-name='int16_t'/>
         </static-array>
         <static-array name='zoom_movemask' count='51'>
-            <static-array count='51' type-name='int8_t'
-                          comment='8 left, 4 right, 2 down, 1 up; -1 any dir'/>
+            <static-array count='51' type-name='zoom_movemask_flags'
+                          comment='-1 allows full movement, 0 blocks all'/>
         </static-array>
         2704 = 52*52
         <static-array name='area_map' count='52'>
